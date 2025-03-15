@@ -20,6 +20,7 @@ import com.yalantis.ucrop.UCrop
 import com.yalantis.ucrop.UCrop.Options
 import com.yalantis.ucrop.UCropImageEngine
 import java.io.File
+import android.app.Activity
 
 class CropImageEngine : UCropImageEngine {
     override fun loadImage(context: Context, url: String, imageView: ImageView) {
@@ -65,6 +66,13 @@ class CropEngine(cropOption: Options) : CropFileEngine {
         uCrop.withOptions(options)
         uCrop.setImageEngine(CropImageEngine())
         uCrop.start(fragment.requireActivity(), fragment, requestCode)
+    }
+
+    override fun onStartCrop(activity: Activity?, Uris: MutableList<Uri>?) {
+        val uCrop = UCrop.of<Any>(Uris!![0], Uris!![1])
+        uCrop.withOptions(options)
+        uCrop.setImageEngine(CropImageEngine())
+        uCrop.start(activity!!)
     }
 }
 

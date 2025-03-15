@@ -27,7 +27,6 @@ import {
   openCamera,
 } from '@baronha/react-native-multiple-image-picker'
 import { useImmer } from 'use-immer'
-import { StatusBar } from 'expo-status-bar'
 import {
   Button,
   CodeTag,
@@ -178,15 +177,6 @@ export default function App() {
 
   return (
     <Container>
-      <SafeAreaView />
-      {Platform.OS === 'android' && (
-        <StatusBar
-          translucent={false}
-          networkActivityIndicatorVisible
-          backgroundColor={background}
-        />
-      )}
-
       <View style={style.titleView}>
         <Image source={assets.logo} style={style.logo} />
         <View style={style.textView}>

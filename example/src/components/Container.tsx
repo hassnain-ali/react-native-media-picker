@@ -1,7 +1,6 @@
 import React from 'react'
-import { StyleSheet, ViewProps } from 'react-native'
+import { SafeAreaView, StatusBar, StyleSheet, ViewProps } from 'react-native'
 import useTheme from '../hook/useTheme'
-import { View } from './View'
 
 interface Props extends ViewProps {
   level?: 0 | 1 | 2 | 3
@@ -13,14 +12,25 @@ export function Container({
   level = 0,
 }: Props) {
   const theme = useTheme()
+
   const backgroundColor = !level
     ? theme.background
     : theme[`background_${level}` as keyof typeof theme]
 
   return (
-    <View style={[style.container, { backgroundColor }, containerStyle]}>
+    <SafeAreaView
+      style={[
+        style.container,
+        {
+          backgroundColor,
+          paddingTop: StatusBar.currentHeight,
+          paddingBottom: 50,
+        },
+        containerStyle,
+      ]}
+    >
       {children}
-    </View>
+    </SafeAreaView>
   )
 }
 

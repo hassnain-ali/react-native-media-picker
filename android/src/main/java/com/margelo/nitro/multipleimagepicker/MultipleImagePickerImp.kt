@@ -39,11 +39,23 @@ import com.yalantis.ucrop.model.AspectRatio
 import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
-
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import android.view.View
 
 class MultipleImagePickerImp(reactContext: ReactApplicationContext?) :
     ReactContextBaseJavaModule(reactContext), IApp {
+    init {
 
+        // Ensure the current activity is valid
+        reactContext?.currentActivity?.window?.decorView?.let { decorView ->
+            ViewCompat.setOnApplyWindowInsetsListener(decorView) { v, insets ->
+                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                v.setPadding(0, 0, 0, systemBars.bottom) // Dynamically adjust bottom padding
+                insets
+            }
+        }
+    }
     override fun getName(): String {
         return "MultipleImagePicker"
     }
@@ -429,7 +441,7 @@ class MultipleImagePickerImp(reactContext: ReactApplicationContext?) :
         cropOption.isForbidSkipMultipleCrop(true)
         cropOption.setMaxScaleMultiplier(100f)
         cropOption.setToolbarWidgetColor(Color.BLACK)
-        cropOption.setStatusBarColor(Color.WHITE)
+        // cropOption.setStatusBarColor(Color.WHITE)
         cropOption.isDarkStatusBarBlack(true)
         cropOption.isDragCropImages(true)
         cropOption.setFreeStyleCropEnabled(config?.freeStyle ?: true)
@@ -527,7 +539,7 @@ class MultipleImagePickerImp(reactContext: ReactApplicationContext?) :
         mainStyle.mainListBackgroundColor = foreground
         mainStyle.selectNormalTextColor = foreground
         mainStyle.isDarkStatusBarBlack = !isDark
-        mainStyle.statusBarColor = background
+        // mainStyle.statusBarColor = background
         mainStyle.mainListBackgroundColor = background
         mainStyle.adapterPreviewGalleryItemSize = DensityUtil.dip2px(appContext, 52f);
         mainStyle.adapterPreviewGalleryBackgroundResource =
@@ -542,10 +554,10 @@ class MultipleImagePickerImp(reactContext: ReactApplicationContext?) :
 //        bottomBar.bottomEditorTextSize = Constant.TOOLBAR_TEXT_SIZE
 
         // MAIN STYLE
-        mainStyle.isCompleteSelectRelativeTop = false
+        // mainStyle.isCompleteSelectRelativeTop = false
         mainStyle.isPreviewDisplaySelectGallery = true
         mainStyle.isAdapterItemIncludeEdge = true
-        mainStyle.isPreviewSelectRelativeBottom = false
+        // mainStyle.isPreviewSelectRelativeBottom = false
 //        mainStyle.previewSelectTextSize = Constant.TOOLBAR_TEXT_SIZE
         mainStyle.selectTextColor = primaryColor
 //        mainStyle.selectTextSize = Constant.TOOLBAR_TEXT_SIZE

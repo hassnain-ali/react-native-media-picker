@@ -4,7 +4,7 @@
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo run:android",
+    "android": "cd ../ && yarn && cd example && expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
     "pod": "cd ios && bundle exec pod update",

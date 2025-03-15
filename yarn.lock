@@ -5212,6 +5212,11 @@ react-native-builder-bob@^0.37.0:
     which "^2.0.2"
     yargs "^17.5.1"
 
+react-native-edge-to-edge@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-edge-to-edge/-/react-native-edge-to-edge-1.4.3.tgz#755c77f9bee94392166a7bdf46618886b54e0c77"
+  integrity sha512-fYchwiQ2D/8NzcvJK1sD9Cm25GFQfsLgYmGpohoSpRxwBwR5UCL0wUf4scoQgYncRh9Hmc2t8ml/sikTwMM3ng==
+
 react-native-nitro-modules@0.25.1, react-native-nitro-modules@^0.25.1:
   version "0.25.1"
   resolved "https://registry.yarnpkg.com/react-native-nitro-modules/-/react-native-nitro-modules-0.25.1.tgz#d38549c62ae75231aaa99a907e0e3fbac5505df4"

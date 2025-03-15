@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.UCropNoEdgeToEdge" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.UCropNoEdgeToEdge" parent="Theme.EdgeToEdge">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="enforceNavigationBarContrast">false</item>
 
     </style>
 
@@ -16,6 +18,7 @@
     <style name="PictureThemeWindowStyle">
         <item name="android:windowEnterAnimation">@anim/ps_anim_album_show</item>
         <item name="android:windowExitAnimation">@anim/ps_anim_album_dismiss</item>
+
     </style>
 
     <style name="PictureThemeDialogWindowStyle">
