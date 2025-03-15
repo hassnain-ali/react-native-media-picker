@@ -1,7 +1,7 @@
 {
-  "name": "@baronha/react-native-multiple-image-picker",
+  "name": "react-native-media-picker",
   "version": "2.2.0",
-  "description": "� react-native-multiple-image-picker enables applications to pick images and videos from multiple smart albums in iOS/Android �",
+  "description": "react-native-multiple-image-picker enables applications to pick images and videos from multiple smart albums in iOS/Android",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "types": "./lib/typescript/index.d.ts",
@@ -46,14 +46,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NitrogenZLab/react-native-multiple-image-picker.git"
+    "url": "git+https://github.com/hassnain-ali/react-native-media-picker.git"
   },
-  "author": "Bảo Hà. <baronn.ha@gmail.com> (https://github.com/baronha)",
+  "author": "Hassnain Ali. <hassnain.ali.13100@gmail.com> (https://github.com/hassnain-ali)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NitrogenZLab/react-native-multiple-image-picker/issues"
+    "url": "https://github.com/hassnain-ali/react-native-media-picker/issues"
   },
-  "homepage": "https://github.com/NitrogenZLab/react-native-multiple-image-picker#readme",
+  "homepage": "https://github.com/hassnain-ali/react-native-media-picker#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

@@ -1,5 +1,10 @@
-![Logo][Logo]
+- `Copy/Fork of https://github.com/NitrogenZLab/react-native-multiple-image-picker`
+- `All rights to the original author.`
+- `Uses react-native 0.78+ No backward compatibility.`
+- `Looks like author abandoned the project so added edge-to-edge support.`
 
+
+![Logo][Logo]
 <p align="center">
   <img src="./files/banner.png" width="100%">
 </p>
@@ -38,8 +43,9 @@ View Nitro Modules' requirements [here](https://nitro.margelo.com/docs/minimum-r
 
 - `Xcode 16+`
 - `iOS 13+`
-- `react-native 0.75+`
-- `compileSdkVersion 34+`
+- `react-native 0.78+ No backward compatibility`
+- `react-native-nitro-modules 0.25.1+ No backward compatibility`
+- `compileSdkVersion 35+`
 
 ## Installation
 
